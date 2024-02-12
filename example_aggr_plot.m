@@ -3,7 +3,7 @@ close all;
 addpath 'C:\Users\enick\Documents\MATLAB\MATLABR2023b\eeglab2023.0'
 eeglab nogui;
 
-indir = './preprocessing/loop/'
+indir = '../preprocessing/loop/'
 
 subjects = dir(indir)
 subjects = {subjects(~ismember({subjects.name},{'.','..'})&~contains({subjects.name},{'fdt'})).name}

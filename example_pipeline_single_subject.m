@@ -101,19 +101,18 @@ pop_eegplot( EEG, 1, 1, 1);
 close all
 
 
-pop_plottopo(EEG, [1:58] , 'collapse all', 0)
+pop_plottopo(EEG, [1:EEG.nbchan]] , 'collapse all', 0)
 
 %%
-close all
 
-figure
+
 tmpEEG = pop_selectevent(EEG,'event',find(contains({EEG.event.type},'standard')))
-pop_plottopo(tmpEEG, [1:58] , '', 0)
-
+figure; pop_plottopo(tmpEEG, [1:EEG.nbchan] , '', 0)
+%%
 figure
 tmpEEG = pop_selectevent(EEG,'event',find(contains({EEG.event.type},'oddball')))
 
-pop_plottopo(tmpEEG, [1:58] , '', 0)
+pop_plottopo(tmpEEG, [1:EEG.nbchan]] , '', 0)
 
 %%
 close all
