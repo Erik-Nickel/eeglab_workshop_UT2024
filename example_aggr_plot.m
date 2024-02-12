@@ -1,6 +1,7 @@
 clear;
 close all;
-addpath 'C:\Users\enick\Documents\MATLAB\MATLABR2023b\eeglab2023.0'
+
+addpath '..\..\..\MATLAB\MATLABR2023b\eeglab2023.0' %you may add you EEGLAB path here
 eeglab nogui;
 
 indir = '../preprocessing/loop/'
